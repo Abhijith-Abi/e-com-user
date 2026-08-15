@@ -68,23 +68,32 @@ const NewCollectionSlider = ({
         try {
             await addToCart({
                 productId: current.id,
-                color: current.colors ? (typeof current.colors === 'string' ? current.colors.split(',')[0].trim() : current.colors[0]) : '',
-                size: current.sizes ? (typeof current.sizes === 'string' ? current.sizes.split(',')[0].trim() : current.sizes[0]) : '',
+                color: current.colors
+                    ? typeof current.colors === "string"
+                        ? current.colors.split(",")[0].trim()
+                        : current.colors[0]
+                    : "",
+                size: current.sizes
+                    ? typeof current.sizes === "string"
+                        ? current.sizes.split(",")[0].trim()
+                        : current.sizes[0]
+                    : "",
                 quantity: 1,
                 productName: current.name_en,
                 productNameAr: current.name_ar,
-                productImage: current.primary_image || current.images?.[0]?.image,
+                productImage:
+                    current.primary_image || current.images?.[0]?.image,
                 required_points: current.required_points,
             });
-            
+
             // Show success toast
-            import('sonner').then(({ toast }) => {
+            import("sonner").then(({ toast }) => {
                 toast.success(`${current.name_en} added to cart!`);
             });
         } catch (error) {
-            console.error('Failed to add to cart:', error);
-            import('sonner').then(({ toast }) => {
-                toast.error('Failed to add item to cart. Please try again.');
+            console.error("Failed to add to cart:", error);
+            import("sonner").then(({ toast }) => {
+                toast.error("Failed to add item to cart. Please try again.");
             });
         } finally {
             setIsAdding(false);
@@ -174,7 +183,7 @@ const NewCollectionSlider = ({
                     className="flex items-center justify-center gap-2 w-full py-2.5 rounded-xl bg-background/90 text-foreground text-sm font-sans tracking-wide hover:bg-background transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
                 >
                     <ShoppingBag className="w-4 h-4" />
-                    {isAdding ? 'Adding...' : 'Add to Cart'}
+                    {isAdding ? "Adding..." : "Add to Cart"}
                 </button>
             </div>
         </div>
@@ -183,7 +192,7 @@ const NewCollectionSlider = ({
 
 const Index = () => {
     const { formatPrice } = useSettingsStore();
-    const [warehouseId, setWarehouseId] = useState<string>('');
+    const [warehouseId, setWarehouseId] = useState<string>("");
 
     // Initialize warehouse ID from localStorage
     useEffect(() => {
@@ -192,7 +201,7 @@ const Index = () => {
                 const id = await warehouseService.getActiveWarehouseId();
                 setWarehouseId(id);
             } catch (error) {
-                console.error('Failed to get warehouse ID:', error);
+                console.error("Failed to get warehouse ID:", error);
             }
         };
         initWarehouse();
@@ -213,9 +222,9 @@ const Index = () => {
         products: bestSellers,
         loading: bestSellersLoading,
         error: bestSellersError,
-    } = useBestSellers({ 
+    } = useBestSellers({
         limit: 10,
-        status: "active"
+        status: "active",
     });
     const {
         products: featuredProducts,
@@ -271,7 +280,11 @@ const Index = () => {
         title: banner.headline_en,
         subpara: banner.sub_paragraph_en,
         desc: banner.cta_label_en,
-        link: banner.link?.replace('https://iqramark.com/', 'https://iqra-mark-ecommerce-git-production-algobizs-projects.vercel.app/') || '/shop',
+        link:
+            banner.link?.replace(
+                "https://iqramark.com/",
+                "https://iqra-mark-ecommerce-git-production-algobizs-projects.vercel.app/",
+            ) || "/shop",
         image: banner.image,
     }));
 
@@ -358,7 +371,10 @@ const Index = () => {
                                 >
                                     {currentHeroSlide.title}
                                 </h1>
-                                <p className="text-white"> {currentHeroSlide.subpara}</p>
+                                <p className="text-white">
+                                    {" "}
+                                    {currentHeroSlide.subpara}
+                                </p>
 
                                 <div className="flex items-center gap-4 animate-fade-in">
                                     <Link
@@ -399,7 +415,8 @@ const Index = () => {
                             className="text-[10px] md:text-xs tracking-[0.4em] uppercase font-sans mx-12 text-primary font-bold"
                         >
                             Elevate Your Style • Premium Quality • Sustainable
-                            Fashion • Sebastian Stores Exclusive • New Arrivals Daily •
+                            Fashion • Sebastian Stores Exclusive • New Arrivals
+                            Daily •
                         </span>
                     ))}
                 </div>
@@ -729,7 +746,10 @@ const Index = () => {
                                 loop: true,
                             }}
                             plugins={[
-                                Autoplay({ delay: 4000, stopOnInteraction: false }),
+                                Autoplay({
+                                    delay: 4000,
+                                    stopOnInteraction: false,
+                                }),
                             ]}
                             className="w-full"
                         >
@@ -748,12 +768,14 @@ const Index = () => {
                                             <div className="bg-secondary/50 border border-border rounded-sm p-4 md:p-6 relative h-full">
                                                 <Quote className="w-6 h-6 md:w-8 md:h-8 text-primary/20 absolute top-3 end-3 md:top-4 md:end-4" />
                                                 <div className="flex gap-0.5 mb-3 md:mb-4">
-                                                    {[...Array(5)].map((_, i) => (
-                                                        <Star
-                                                            key={i}
-                                                            className="w-3.5 h-3.5 md:w-4 md:h-4 fill-primary text-primary"
-                                                        />
-                                                    ))}
+                                                    {[...Array(5)].map(
+                                                        (_, i) => (
+                                                            <Star
+                                                                key={i}
+                                                                className="w-3.5 h-3.5 md:w-4 md:h-4 fill-primary text-primary"
+                                                            />
+                                                        ),
+                                                    )}
                                                 </div>
                                                 <p className="text-xs md:text-sm font-sans text-muted-foreground leading-relaxed mb-4 md:mb-5">
                                                     {review}
@@ -857,11 +879,11 @@ const Index = () => {
                     <div className="absolute inset-0 bg-foreground/40" />
                     <div className="absolute inset-0 flex flex-col items-center justify-center text-center px-6">
                         <h2 className="text-2xl md:text-5xl font-display text-primary-foreground mb-3 md:mb-4 max-w-lg">
-                            Elevate Your Modest Style with Grace
+                            Style. Confidence. Sebastian.{" "}
                         </h2>
                         <p className="text-primary-foreground/70 font-sans text-xs md:text-sm mb-6 md:mb-8 max-w-md">
-                            Discover premium abayas, hijabs, and Islamic
-                            essentials crafted for elegance and comfort.
+                            Discover premium fashion designed for effortless
+                            elegance and everyday confidence.
                         </p>
                         <Link
                             to="/shop"
