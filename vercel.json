@@ -1,0 +1,19 @@
+{
+  "buildCommand": "npm run build",
+  "installCommand": "npm install",
+  "framework": "vite",
+  "rewrites": [
+    {
+      "source": "/sales-api/verify-customer-card/",
+      "destination": "https://sales.sebastianstores.com/api/verify-customer-card/"
+    },
+    {
+      "source": "/sales-api/verify-customer-card",
+      "destination": "https://sales.sebastianstores.com/api/verify-customer-card/"
+    },
+    {
+      "source": "/(.*)",
+      "destination": "/index.html"
+    }
+  ]
+}
