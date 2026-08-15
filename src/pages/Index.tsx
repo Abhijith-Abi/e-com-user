@@ -878,10 +878,10 @@ const Index = () => {
                     />
                     <div className="absolute inset-0 bg-foreground/40" />
                     <div className="absolute inset-0 flex flex-col items-center justify-center text-center px-6">
-                        <h2 className="text-2xl md:text-5xl font-display text-primary-foreground mb-3 md:mb-4 max-w-lg">
+                        <h2 className="text-2xl md:text-5xl font-display text-white mb-3 md:mb-4 max-w-lg">
                             Style. Confidence. Sebastian.{" "}
                         </h2>
-                        <p className="text-primary-foreground/70 font-sans text-xs md:text-sm mb-6 md:mb-8 max-w-md">
+                        <p className="text-white/80 font-sans text-xs md:text-sm mb-6 md:mb-8 max-w-md">
                             Discover premium fashion designed for effortless
                             elegance and everyday confidence.
                         </p>
