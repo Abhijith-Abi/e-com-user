@@ -400,7 +400,7 @@ const ProductDetail = () => {
               {productDescription && (
                 <p className="text-muted-foreground font-sans text-sm leading-relaxed">{productDescription}</p>
               )}
-              {product.required_points && (
+              {product.required_points > 0 && (
                 <p className="text-primary font-sans text-sm font-medium mt-2">
                   {product.required_points} Points Required
                 </p>

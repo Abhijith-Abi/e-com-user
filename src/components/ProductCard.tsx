@@ -125,7 +125,7 @@ const ProductCard = ({ product }: ProductCardProps) => {
           <h3 className="font-display text-sm md:text-base leading-tight">{productName}</h3>
         </div>
         <p className="text-xs text-muted-foreground font-sans tracking-wide">{product.sku}</p>
-        {product.required_points && (
+        {product.required_points > 0 && (
           <p className="text-xs text-primary font-sans font-medium">
             {product.required_points} Points Required
           </p>

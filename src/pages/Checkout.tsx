@@ -710,7 +710,7 @@ const Checkout = () => {
                       <div className="flex-1 min-w-0">
                         <p className="text-xs font-display truncate">{item.productName || item.productId}</p>
                         <p className="text-[10px] text-muted-foreground font-sans">{item.color} / {item.size} × {item.quantity}</p>
-                        {item.required_points && (
+                        {item.required_points > 0 && (
                           <p className="text-[10px] text-primary font-sans font-medium">{item.required_points} Points</p>
                         )}
                         <p className="text-xs font-sans font-medium">{formatPrice(price * item.quantity)}</p>

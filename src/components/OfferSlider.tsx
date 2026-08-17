@@ -85,10 +85,10 @@ const OfferSlider = () => {
                                             />
                                             <div className="absolute bg-gradient-to-t from-foreground/50 via-transparent to-transparent" />
                                             <div className="absolute bottom-0 left-0 right-0 p-4 md:p-6">
-                                                <p className="text-[10px] md:text-xs font-sans text-primary-foreground/70 tracking-wider uppercase mb-1">
+                                                <p className="text-[10px] md:text-xs font-sans text-white/80 tracking-wider uppercase mb-1">
                                                     {subHeading}
                                                 </p>
-                                                <h3 className="font-display text-lg md:text-2xl text-primary-foreground mb-2 md:mb-3">
+                                                <h3 className="font-display text-lg md:text-2xl text-white mb-2 md:mb-3">
                                                     {heading}
                                                 </h3>
                                                 <span className="inline-block px-5 md:px-6 py-2 md:py-2.5 bg-primary text-primary-foreground rounded-full text-[10px] md:text-xs font-sans font-bold tracking-wider hover:opacity-90 transition-all shadow-lg shadow-primary/20">
