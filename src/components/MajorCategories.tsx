@@ -80,10 +80,10 @@ const MajorCategories = ({
                                 />
                                 <div className="absolute bg-gradient-to-t from-foreground/70 via-foreground/20 to-transparent" />
                                 <div className="absolute bottom-0 left-0 right-0 p-5 md:p-8">
-                                    <p className="text-[10px] md:text-xs font-sans text-primary-foreground/60 tracking-wider uppercase mb-1">
+                                    <p className="text-[10px] md:text-xs font-sans text-white/80 tracking-wider uppercase mb-1">
                                         {displayCategories[0].description}
                                     </p>
-                                    <h3 className="font-display text-2xl md:text-4xl text-primary-foreground mb-3 md:mb-4">
+                                    <h3 className="font-display text-2xl md:text-4xl text-white mb-3 md:mb-4">
                                         {displayCategories[0].name}
                                     </h3>
                                     <span className="inline-flex items-center gap-2 px-6 py-3 bg-primary text-primary-foreground rounded-full text-xs font-sans font-bold tracking-wider hover:opacity-90 transition-all shadow-lg shadow-primary/20">
@@ -112,13 +112,13 @@ const MajorCategories = ({
                                     />
                                     <div className="absolute bg-gradient-to-t from-foreground/70 via-foreground/20 to-transparent" />
                                     <div className="absolute bottom-0 left-0 right-0 p-4 md:p-6">
-                                        <p className="text-[10px] md:text-xs font-sans text-primary-foreground/60 tracking-wider uppercase mb-1">
+                                        <p className="text-[10px] md:text-xs font-sans text-white/80 tracking-wider uppercase mb-1">
                                             {displayCategories[1].description}
                                         </p>
-                                        <h3 className="font-display text-xl md:text-2xl text-primary-foreground mb-2">
+                                        <h3 className="font-display text-xl md:text-2xl text-white mb-2">
                                             {displayCategories[1].name}
                                         </h3>
-                                        <span className="inline-flex items-center gap-2 text-xs font-sans text-primary-foreground/80 tracking-wider group-hover:text-primary-foreground transition-colors">
+                                        <span className="inline-flex items-center gap-2 text-xs font-sans text-white/90 tracking-wider group-hover:text-white transition-colors">
                                             Explore{" "}
                                             <ArrowRight className="w-3.5 h-3.5" />
                                         </span>
@@ -145,13 +145,13 @@ const MajorCategories = ({
                                     />
                                     <div className="absolute bg-gradient-to-t from-foreground/70 via-foreground/20 to-transparent" />
                                     <div className="absolute bottom-0 left-0 right-0 p-4 md:p-6">
-                                        <p className="text-[10px] md:text-xs font-sans text-primary-foreground/60 tracking-wider uppercase mb-1">
+                                        <p className="text-[10px] md:text-xs font-sans text-white/80 tracking-wider uppercase mb-1">
                                             {displayCategories[2].description}
                                         </p>
-                                        <h3 className="font-display text-xl md:text-2xl text-primary-foreground mb-2">
+                                        <h3 className="font-display text-xl md:text-2xl text-white mb-2">
                                             {displayCategories[2].name}
                                         </h3>
-                                        <span className="inline-flex items-center gap-2 text-xs font-sans text-primary-foreground/80 tracking-wider group-hover:text-primary-foreground transition-colors">
+                                        <span className="inline-flex items-center gap-2 text-xs font-sans text-white/90 tracking-wider group-hover:text-white transition-colors">
                                             Explore{" "}
                                             <ArrowRight className="w-3.5 h-3.5" />
                                         </span>

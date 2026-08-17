@@ -119,7 +119,7 @@ const NewCollectionSlider = ({
             className={`${mobile ? "w-full" : "w-[300px]"} rounded-2xl bg-background/20 backdrop-blur-xl border border-background/30 shadow-2xl overflow-hidden`}
         >
             <div className="flex items-center justify-between px-4 pt-4 pb-2">
-                <h3 className="text-sm font-display text-primary-foreground">
+                <h3 className="text-sm font-display text-white">
                     New Collection
                 </h3>
                 <div className="flex items-center gap-1">
@@ -131,7 +131,7 @@ const NewCollectionSlider = ({
                                     allProducts.length,
                             )
                         }
-                        className="w-7 h-7 rounded-full bg-background/20 backdrop-blur-sm flex items-center justify-center text-primary-foreground/80 hover:bg-background/40 transition-colors"
+                        className="w-7 h-7 rounded-full bg-background/20 backdrop-blur-sm flex items-center justify-center text-white/80 hover:bg-background/40 transition-colors"
                     >
                         <ChevronLeft className="w-3.5 h-3.5" />
                     </button>
@@ -139,7 +139,7 @@ const NewCollectionSlider = ({
                         onClick={() =>
                             setIdx((i) => (i + 1) % allProducts.length)
                         }
-                        className="w-7 h-7 rounded-full bg-background/30 backdrop-blur-sm flex items-center justify-center text-primary-foreground hover:bg-background/50 transition-colors"
+                        className="w-7 h-7 rounded-full bg-background/30 backdrop-blur-sm flex items-center justify-center text-white hover:bg-background/50 transition-colors"
                     >
                         <ChevronRight className="w-3.5 h-3.5" />
                     </button>
@@ -157,21 +157,21 @@ const NewCollectionSlider = ({
                         />
                     </div>
                     <div className="flex items-start justify-between gap-2 mb-1">
-                        <p className="text-sm font-display text-primary-foreground leading-tight line-clamp-2">
+                        <p className="text-sm font-display text-white leading-tight line-clamp-2">
                             {productName}
                         </p>
                         <div className="flex flex-col items-end gap-0.5">
-                            <p className="text-sm font-sans font-medium text-primary-foreground whitespace-nowrap">
+                            <p className="text-sm font-sans font-medium text-white whitespace-nowrap">
                                 {formatPrice(displayPrice)}
                             </p>
                             {originalPrice && (
-                                <p className="text-xs font-sans text-primary-foreground/60 line-through whitespace-nowrap">
+                                <p className="text-xs font-sans text-white/60 line-through whitespace-nowrap">
                                     {formatPrice(originalPrice)}
                                 </p>
                             )}
                         </div>
                     </div>
-                    <p className="text-[11px] font-sans text-primary-foreground/60">
+                    <p className="text-[11px] font-sans text-white/60">
                         {current.category}
                     </p>
                 </Link>
@@ -486,7 +486,7 @@ const Index = () => {
                                                         />
                                                         <div className="absolute inset-0 bg-gradient-to-t from-foreground/60 via-transparent to-transparent" />
                                                         <div className="absolute bottom-0 left-0 right-0 p-3 md:p-4 text-center">
-                                                            <h3 className="font-display text-sm md:text-lg text-primary-foreground">
+                                                            <h3 className="font-display text-sm md:text-lg text-white">
                                                                 {name}
                                                             </h3>
                                                         </div>
